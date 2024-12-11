@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eleonore de Paris</title>
+    <style>
+        body {
+            font-family: 'Apple Chancery', cursive; /* Apply Apple Chancery font */
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        header {
+            position: relative;
+            background-image: url('image1.jpg'); /* Use image1.jpg as the header background */
+            background-size: cover;
+            background-position: center;
+            padding: 100px 0; /* Increase padding for larger header */
+            text-align: center;
+        }
+        header::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: inherit; /* Inherit the background image */
+            filter: blur(5px); /* Apply blur to the background image */
+            z-index: 1; /* Put the background blur behind the text */
+        }
+        header h1 {
+            margin: 0;
+            font-size: 3em; /* Larger text for a more elegant look */
+            position: relative;
+            z-index: 2; /* Ensure the header text stays above the blurred background */
+        }
+        header p {
+            position: relative;
+            z-index: 2;
+            font-size: 1.5em;
+        }
+        nav {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        section {
+            padding: 20px;
+        }
+        .hero {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #f8e1e6; /* Soft pastel pink */
+        }
+        .hero h2 {
+            font-size: 2.5em;
+        }
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .service-item {
+            background-color: #fff;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .service-item h3 {
+            font-size: 1.5em;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+        footer p {
+            margin: 0;
+        }
+        .image-gallery {
+            display: flex;
+            justify-content: space-between;
+            margin: 40px 0;
+        }
+        .image-gallery img {
+            width: 30%;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+        .image-gallery img:hover {
+            transform: scale(1.05); /* Hover effect to enlarge images */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Eleonore de Paris</h1>
+        <p>An autentic escorting experience </p>
+    </header>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <section id="home" class="hero">
+        <h2>Welcome to Eleonore de Paris independent escort</h2>
+        <p>Experience the joy of a premium escorting service. Reliable, efficient, and tailored to your needs.</p>
+    </section>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I am an authentic Parisian woman, 34 years old, seeking thrilling experiences outside my well-balanced life as both a wife and a mother. By day, I work as a scientist, and in my free time, I indulge in artistic pursuits, sports, and escorting distinguished gentlemen with refined tastes. I have a petite physique (1.63m, 53kg, size T36, 85A), brunette hair, and enchanting doe eyes that are sure to captivate your attention. </p>
+    </section>
+    <section id="services">
+        <h2>My Services</h2>
+        <div class="services">
+            <div class="service-item">
+                <h3>Premium Escort Tarifs</h3>
+                <p> My fees are non-negociable. For first-time meetings: 400 euros for one hour, or 650 euros for two hours (outcall only). For regular clients: 350 euros for one hour, or 550 euros for two hours. </p>
+            </div>
+            <div class="service-item">
+                <h3>Organization</h3>
+                <p> During our first meeting, we’ll start with a coffee to see if we feel a connection. If we do, we can enjoy some social time over a drink, for which I’ll request 50 euros when we sit down. During this time, we’ll get to know each other better and discuss your desires and how I can fulfill them. </p>
+            </div>
+            <div class="service-item">
+                <h3>About you</h3>
+                <p>I truly enjoy being your escort for a few hours. I am a very receptive woman who appreciates men who know what they want—gentlemen with busy schedules seeking a moment of relaxation in a little bubble of tranquility. I especially love it when you have a refined aesthetic taste, making me the object of your admiration. </p>
+            </div>
+        </div>
+    </section>
+    <!-- Image Gallery before the Contact Section -->
+    <section id="gallery">
+        <h2>Our Work</h2>
+        <div class="image-gallery">
+            <img src="image2.jpg" alt="Service Image 1">
+            <img src="image3.jpg" alt="Service Image 2">
+            <img src="image4.jpg" alt="Service Image 3">
+        </div>
+    </section>
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>If you're interested, please send me a message with a picture of yourself attached, and tell me a bit about yourself and your ideas for our meeting.</p>
+        <p>Email: MeetEleonoreinParis@hotmail.com</p>
+        <p>Or fill out the form below:</p>
+        <form action="your-server-endpoint" method="post" enctype="multipart/form-data">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="5" required></textarea><br><br>
+            <label for="attachment">Attach a file:</label><br>
+            <input type="file" id="attachment" name="attachment" accept=".jpg,.jpeg,.png,.pdf" required><br><br>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+    <footer>
+        <p>&copy; 2024 Eleonore de Paris. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
+
